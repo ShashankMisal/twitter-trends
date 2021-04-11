@@ -6,16 +6,11 @@ import Trend from './Trend'
 import axios from 'axios'
 
 
-
-
-
 function Explore() {
 
     const [trends, setTrends] = useState([]) 
 
     useEffect(()=>{
-
-
         axios.get('https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/trends/place.json?id=23424848', {
             headers: {
                 'Authorization':`Bearer ${process.env.REACT_APP_KEY}`
@@ -58,16 +53,16 @@ function Explore() {
             <h2 className="explore__indiaTrends">India Trends</h2>
 
             {
-                   trends.map((val,index)=>{
+                (trends.length!==0) ?  ( trends.map((val,index)=>{
                        return <Trend
                                 key={index}
                                 trendNo={index}
                                 trendName={val.name}
                                 trendVolume={val.tweet_volume}
                                 />
-                })
+                })): (<h2 style={{textAlign:"center"}}>Loading.........</h2>) 
                 
-                }
+                } 
           
         </div>
     )

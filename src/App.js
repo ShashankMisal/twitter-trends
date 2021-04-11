@@ -9,14 +9,27 @@ import { Route, Switch } from 'react-router-dom';
 function App() {
   return (
     <div className="app">
-      <Sidebar />
 
         <Switch>
-          <Route path="/" component={Feed} exact />
-          <Route path="/Explore" component={Explore} exact />
-        </Switch>
+          
+          <Route exact path="/" >
+            <Sidebar />
+            <Feed />
+            <Widgets />
+          </Route>
+
+          <Route path="/Explore">
+            <Sidebar />
+            <Explore />
+            <Widgets />
+          </Route>
+
+          <Route path="*">
+              <h1>Opps page not found</h1>
+          </Route>
         
-      <Widgets />
+        </Switch>
+
     </div>
   );
 }
