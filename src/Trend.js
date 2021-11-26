@@ -16,7 +16,7 @@ function format(num) {
 
 
 
-function Trend({key,trendNo,trendName,trendVolume}) {
+function Trend({trendNo,trendName,trendVolume}) {
     return (
         <div className="trend">
             
