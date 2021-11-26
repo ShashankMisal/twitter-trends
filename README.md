@@ -1,70 +1,66 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [Twitter-Trends](https://twitter-trendss.netlify.app/)
 
-## Available Scripts
+A Twitter clone with real time fetching of top 50 trending topics using twitter's api.
 
-In the project directory, you can run:
+> Note: `Real time fetching of api is not working on PRODUCTION VERSION because of the proxy which is used to fix the CORS error as this application is not having a real server`
 
-### `npm start`
+--
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> Note:`CORS ISSUE in fixed in DEVELOPMENT VERSION and its seamlessly working in local environment`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+#### Below are screenCaptures of local and orginal twitter trending section
+### Twitter-trends portal Trending Section 👇
+---
+![clonedevicetwitter](https://user-images.githubusercontent.com/68539474/143623235-38239ff8-7073-448a-bac6-b065403dfb30.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Original Twitter Trending Section 👇
+---
+![deviceoriginaltwitter](https://user-images.githubusercontent.com/68539474/143623327-14b0e89c-4582-49cc-ad1a-46dcb3151eed.png)
 
-### `npm run build`
+> Note: `check the trending section of both the above screen-captures`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Steps to run in local environment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Go to Twitter API  and create a new project.
+```
+https://developer.twitter.com/en/docs/twitter-api
+```
+2. Go to FIREBASE Website and create a new project
+```
+https://firebase.google.com/
+```
+3. Create a .env file at root of your source code
+```
+.env
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Copy your keys and tokens from your newly created project and paste them in .env file using below format.
+```
+REACT_APP_KEY="Your bearer token from twitter-api"
 
-### `npm run eject`
+REACT_APP_API_KEY="Your firebase api key"
+REACT_APP_AUTH_DOMAIN="Your firebase auth domain"
+REACT_APP_PROJECT_ID="Your firebase project id"
+REACT_APP_STORAGE_BUCKET="Your storage bucket"
+REACT_APP_MESSAGING_SENDER_ID="Your firebase messaging sender id"
+REACT_APP_APP_ID="Your firebase app id"
+REACT_APP_MEASUREMENT_ID="Your firebase measurement id"
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+>  `Put your keys and tokens without double quotes`
+> `Your .env file should look like 👆`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Clone the repository
+```
+git clone "https://github.com/ShashankMisal/twitter-trends.git"
+```
+6. Install the dependencies
+```
+npm install
+```
+7. Start the server
+```
+npm start
+```
